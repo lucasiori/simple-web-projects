@@ -1,5 +1,5 @@
 <p align="center">
-  <image src="https://github.com/lucasiori/animated-form-input/blob/master/.github/demo.gif" alt="Demo" />
+  <image src="https://github.com/lucasiori/simple-web-projects/blob/master/animated-form-input/.github/demo.gif" alt="Demo" />
 </p>
 
 <h3 align="center">
@@ -7,11 +7,12 @@
 </h3>
 <p align="center">Thanks for your visit.</p>
 
-<br />
+## :eye: Live Preview
+See the application working - <a href="https://codepen.io/lucasiori/full/xxwagyo">Preview: Animated Form Input</a>
 
 ## :memo: Licence
 
-MIT Licence. See the file [LICENSE](https://github.com/lucasiori/animated-form-input/blob/master/LICENSE) for more details.
+MIT Licence. See the file [LICENSE](https://github.com/lucasiori/simple-web-projects/blob/master/animated-form-input/LICENSE) for more details.
 
 ---
 
