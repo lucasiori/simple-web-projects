@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1BF8FF , #3A669D);
+  overflow: hidden;
+}
+
+body {
+  font: 18px 'Roboto', sans-serif;
+}
+
+.traffic-light {
+  width: 100px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #424242;
+  box-shadow: 2px 2px 0px 2px #5B5B5B;
+  border-radius: 50px;
+  padding: 15px 0;
+}
+
+.traffic-light .light {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #2d2d2d;
+  border-radius: 50px;
+  transition: background 500ms, box-shadow 500ms;
+}
+
+.traffic-light .light::after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-right: 3px solid #ccc;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+  right: 8px;
+}
+
+.traffic-light .light:first-child {
+  margin-top: 15px;
+}
+
+.traffic-light .light:last-child {
+  margin-bottom: 15px;
+}
+
+.traffic-light.stop .red-light {
+  background: #e22e2e;
+  box-shadow: 0 0 20px 6px #e22e2e;
+}
+
+.traffic-light.stop .red-light::after {
+  border-color: #F76565;
+}
+
+.traffic-light.warning .yellow-light {
+  background: #F4CB4C;
+  box-shadow: 0 0 20px 6px #F4CB4C;
+}
+
+.traffic-light.warning .yellow-light::after {
+  border-color: #F3EB52;
+}
+
+.traffic-light.continue .green-light {
+  background: #44A742;
+  box-shadow: 0 0 20px 6px #44A742;
+}
+
+.traffic-light.continue .green-light::after {
+  border-color: #57C755;
+}
+
+.traffic-description {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.traffic-description h1 {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 10px 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(200px);
+  transition: all 500ms;
+  z-index: -1
+}
+
+.traffic-description.stop .stop-description {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.traffic-description.warning .stop-description {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-200px);
+}
+
+.traffic-description.warning .warning-description {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.traffic-description.continue .warning-description {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-200px);
+}
+
+.traffic-description.continue .continue-description {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+.traffic-description.stop .continue-description {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-200px);
+}

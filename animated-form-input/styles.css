@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #424242;
+}
+
+body, input {
+  font: 18px 'Roboto', sans-serif;
+}
+
+.input-group {
+  position: relative;
+  display: block;
+}
+
+.input-group + .input-group {
+  margin-top: 50px;
+}
+
+.input-group::before, .input-group::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  z-index: 1;
+}
+
+.input-group::before {
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+  bottom: 0;
+  left: 0;
+  transition: height 75ms 225ms linear, width 150ms 300ms linear, border 0s 300ms;
+}
+
+.input-group::after {
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  top: 0;
+  right: 0;
+  transition: height 75ms linear, width 150ms 75ms linear, border 0s 300ms;
+}
+
+.input-group:focus-within::before, .input-group:focus-within::after {
+  width: 100%;
+  height: calc(100% - 2px);
+  border-color: #1BF8FF;
+}
+
+.input-group:focus-within::before {
+  transition: width 150ms linear, height 75ms 150ms linear;
+}
+
+.input-group:focus-within::after {
+  transition: width 150ms 225ms linear, height 75ms 375ms linear, border 0s 225ms;
+}
+
+.input-group input {
+  width: 300px;
+  height: 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
+  padding: 7px 20px 0;
+}
+
+.input-group input[value] {
+  border-bottom: 2px solid #1BF8FF;
+}
+
+.input-group label {
+  position: absolute;
+  background: #424242;
+  color: #FFF;
+  padding: 0 5px;
+  top: calc(50% - 10.5px);
+  left: 15px;
+  transition: all 550ms;
+  z-index: -1;
+}
+
+.input-group:focus-within label, .input-group input[value] + label {
+  color: #1BF8FF;
+  font-size: 14px;
+  top: calc(0% - 7px);
+  left: 0px;
+  z-index: 2;
+}
