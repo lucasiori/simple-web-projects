@@ -1,5 +1,5 @@
 <p align="center">
-  <image src="https://github.com/lucasiori/traffic-light/blob/master/.github/demo.gif" alt="Demo" />
+  <image src="https://github.com/lucasiori/simple-web-projects/blob/master/traffic-light/.github/demo.gif" alt="Demo" />
 </p>
 
 <h3 align="center">
@@ -10,11 +10,9 @@
 ## :eye: Live Preview
 See the application working - <a href="https://codepen.io/lucasiori/full/RwWEPJQ">Preview: Animation Traffic Light</a>
 
-<br />
-
 ## :memo: Licence
 
-MIT Licence. See the file [LICENSE](https://github.com/lucasiori/animated-form-input/blob/master/LICENSE) for more details.
+MIT Licence. See the file [LICENSE](https://github.com/lucasiori/simple-web-projects/blob/master/traffic-light/LICENSE) for more details.
 
 ---
 
